@@ -1,0 +1,34 @@
+- the HashTable class has:
+    - a map to store the URLs as keys and number of visits as the values
+    - a text file containing 10000 rows where each row has a URL and number of visits
+- this class contains the functions:
+    - read: reads the text file and adds each row as an element of the dictionary
+    - most: returns the most frequently visited URL
+    - get: returns the number of visits for a given URL key in the map
+    - put: stores URL and number of visits as one entry of the map
+    - remove: removes the entry of the map with a given URL key
+- the read function:
+    - has the text file as a parameter
+    - for loop traversing each line of the text file
+    - reads line
+    - splits line into two values: URL and number of visits
+    - gets URL from one line and stores as temp key variable
+    - gets the number of visits from one line and stores as temp value variable
+    - calls put function which adds the temp key and value variables to the map as one entry
+- the most function:
+    - has the current unsorted map as a parameter
+    - uses the built-in sorted function with reverse=True
+    - this saves the result as a new map with the highest value as the first element
+    - returns the first element of the newly sorted map
+- the get function:
+    - has the key as a parameter
+    - uses the get function from dictionary
+    - returns the value of the key if the key is stored in the map
+    - otherwise returns null if key is not stored in the map
+- the put function:
+    - has the string of a URL and number of visits as parameters
+    - uses put function from dictionary to add entry to map
+    - if map already contains an entry with key, replaces old value with new
+- the remove function:
+    - has the key as a parameter
+    - if map contains an entry with key, remove entry
